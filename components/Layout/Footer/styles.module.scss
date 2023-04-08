@@ -1,0 +1,148 @@
+.footer{
+    margin-top: 150px;
+    padding: 300px 0 60px;
+    width: 100%;
+    height: auto;
+    background-image: url(../../../public/imgs/footer-bg.png);
+    background-position: bottom !important;
+    background-size: cover;
+}
+.footerHeader{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.footerHeader h2{
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    width: 500px;
+}
+.footerFormCon{
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+.footerForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.footerForm input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    border-bottom: 1px solid #fff;
+    padding: 1rem 1rem 1rem 0;
+    width: 300px;
+}
+.footerForm input::placeholder{
+    color: #fff;
+}
+.footerForm button{
+    border-radius: 23px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 15px 6rem;
+    transition: all 300ms ease;
+
+}
+.footerForm button:hover{
+    cursor: pointer;
+    background: #fff;
+    color: #e3760f;
+}
+.footerBoxesContainer{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 50px;
+}
+
+.footerBoxHeader{
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.footerBoxItem{
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.footerRightBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+.footerRightBox h3{
+    margin-bottom: 2rem;
+}
+.footerCopyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        padding: 250px 0 0 0;
+    }
+    .footerHeader h2{
+        font-size: 1.2rem;
+        margin: 0 ;
+    }
+    .footerFormCon{
+        margin: 1rem 0;
+    }
+    .footerForm{
+        gap: 8px;
+        flex-direction: column;
+    }
+    .footerForm input{
+        font-size: 14px;
+        width: 30   0px;
+    }
+    .footerForm button{
+        border-radius: 23px;
+        border: 1px solid #fff;
+        background-color: transparent;
+        color: #fff;
+        padding: 8px 2rem;
+        transition: all 300ms ease;
+    
+    }
+    
+    .footerBoxesContainer{
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0 20px;
+        margin-top: 0;
+    }
+    .footerRightBox .footerBoxHeader{
+        text-align: center;
+    }
+    .footerRightBox {
+        justify-content: center;
+        // width: auto;
+    }
+    .footerRightBox img{
+        width: 100px;
+        height: 90px;
+    }
+}

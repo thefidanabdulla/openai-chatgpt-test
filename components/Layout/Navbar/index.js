@@ -45,7 +45,6 @@ const Index = () => {
       </div>
       <button className={styles.navHamburgerIcon} onClick={() => setIsMobileMenuOpened(!isMobileMenuOpened)}>
         {!isMobileMenuOpened ? <RxHamburgerMenu /> : <GrClose /> }
-        
       </button>
     </nav>
   )

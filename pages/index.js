@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div >
       <Head>
-        <title>Eddy</title>
+        <title>Eddy- the best place to learn anything!</title>
       </Head>
       salam Aleykum
     </div>

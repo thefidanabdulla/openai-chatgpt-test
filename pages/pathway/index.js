@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import styles from "./index.module.css";
+import styles from "./styles.module.scss";
 
 export default function Home() {
   const [userInput, setUserInput] = useState("");

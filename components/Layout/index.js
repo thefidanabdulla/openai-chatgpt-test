@@ -1,9 +1,18 @@
 import React from 'react'
 import styles from './styles.module.scss';
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
-const Index = () => {
+
+const Index = ({children}) => {
   return (
-    <div className={styles.background}>Index</div>
+    <>
+     <Navbar />
+     <main>
+      </main>
+     {children}
+     <Footer /> 
+    </>
   )
 }
 

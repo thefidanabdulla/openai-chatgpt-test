@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 
 const Index = () => {
   return (
-    <footer>Index</footer>
+    <div className={styles.comingSoon}>Coming Soon</div>
   )
 }
 

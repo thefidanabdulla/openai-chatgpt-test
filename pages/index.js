@@ -9,6 +9,7 @@ export default function Home() {
         <title>Eddy- the best place to learn anything!</title>
       </Head>
       salam Aleykum
+      
     </div>
   );
 }

@@ -1,0 +1,129 @@
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0);
+}
+
+.whiteNavbar {
+  transition: all 300ms ease;
+  background: rgba(255, 255, 255, .95) !important;
+}
+
+.navMenu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navMenuLink {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2a2a2a;
+}
+
+.signinSignupBtn {
+  background: #e3760f;
+  padding: 0 20px;
+  height: 40px;
+  border-radius: 8px;
+  color: #2a2a2a;
+  font-size: 15px;
+  line-height: 40px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 300ms ease;
+}
+
+.signinSignupBtn:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.navHamburgerIcon {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navHamburgerIcon {
+    display: block;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .navMenu {
+    width: 600px;
+    max-width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+  .navMenuOpened{
+    display: flex;
+  }
+
+  
+  .navMenuLink {
+    width: 100%;
+    padding: 1rem 0;
+    background: rgba(0, 0, 0, .05);
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    transform-origin: top center;
+    opacity: 0;
+  }
+  
+  .navMenuLink1 {
+    animation: translateDropdownMenuItem 500ms 80ms ease-in-out forwards;
+  }
+  .navMenuLink2 {
+    animation: translateDropdownMenuItem 500ms 160ms ease-in-out forwards;
+  }
+  .navMenuLink3 {
+    animation: translateDropdownMenuItem 500ms 240ms ease-in-out forwards;
+  }
+  .navMenuLink4 {
+    animation: translateDropdownMenuItem 500ms 320ms ease-in-out forwards;
+  }
+  .navMenuLink5 {
+    animation: translateDropdownMenuItem 500ms 400ms ease-in-out forwards;
+  }
+  
+  .signinSignupBtnCon {
+    background: rgba(0, 0, 0, .05);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    opacity: 0;
+  }
+}
+
+@keyframes translateDropdownMenuItem {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import Header from '../components/Header'
 
 export default function Home() {
   
@@ -8,7 +9,9 @@ export default function Home() {
       <Head>
         <title>Eddy- the best place to learn anything!</title>
       </Head>
-      salam Aleykum
+      <Header>
+
+      </Header>
       
     </div>
   );

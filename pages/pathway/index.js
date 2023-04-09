@@ -1,20 +1,13 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
+import {AiOutlineSearch} from "react-icons/ai";
 
 export default function Home() {
   const [userInput, setUserInput] = useState("");
   const [result, setResult] = useState();
   const [splitedResults, setSplitedResults] = useState();
 
-  useEffect(() => {
-    // setTimeout(() => {
-    //   setSplitedResults(result)
-    // }, 2000)
-    // setSplitedResults(result)
-    // console.log("splitedResults" ,splitedResults)
-    console.log("result" ,result)
-  }, [result])
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -44,14 +37,14 @@ export default function Home() {
 
 
   return (
-    <div>
+    <div className={styles.pathwayContainer}>
       <Head>
         <title>Eddy Pathways</title>
       </Head>
 
-      <main className={''}>
-        <h3>Test ChatGPT</h3>
-        <form onSubmit={onSubmit}>
+      <main className={styles.pathwatMain}>
+        <h3 className={styles.pathwayHeader}>Search</h3>
+        <form onSubmit={onSubmit} className={styles.pathwayForm}>
           <input
             type="text"
             name="input"
@@ -59,12 +52,13 @@ export default function Home() {
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
           />
-          <input type="submit" value="Generate names" />
+          <button type="submit"><AiOutlineSearch /></button>
         </form>
-        <div className={styles.result}> 
+
+        <div className={styles.resultContainer}> 
         {
           result?.map((item, index) => (
-            <div key={index}>
+            <div key={index} className={styles.resultItem}>
               <label>
                 <input type="checkbox"/>
                 {item}
@@ -73,7 +67,15 @@ export default function Home() {
           ) )
         }
         </div>
+        {result?.length && (
+          <div className={styles.progressbarCon}>
+            <div className={styles.progressbar}>
+              <div className={styles.progressbarInner}></div>
+            </div>
+          </div>
+        )} 
       </main>
+
     </div>
   );
 }

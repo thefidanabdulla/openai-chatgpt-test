@@ -1,0 +1,169 @@
+.findoutSection {
+  padding: 150px 0 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url(./../../public/imgs/services-right-dec.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-bottom: 2rem;
+}
+
+.findoutSection h2 {
+  text-align: center;
+  font-size: 30px;
+  width: 47%;
+  margin-bottom: 24px;
+}
+
+.findoutSectionTitleSpan {
+  color: #ff8000;
+}
+
+.findoutSection p {
+  color: #6f6262;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: center;
+}
+
+.serviceSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 4rem;
+  gap: 2rem;
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 230px;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  border-radius: 10px;
+  border-top-right-radius: 50px;
+  transition: all 0.3s;
+}
+
+.serviceCardInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceCardInfo h3 {
+  transition: all 0.3s;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.serviceCardInfo p {
+  margin: 1rem 0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #6f6262;
+}
+
+.serviceCardImg img {
+  margin-bottom: 2rem;
+}
+.serviceCard button{
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  color: royalblue;
+  font-weight: 500;
+  cursor: pointer;  
+}
+.serviceCard:hover{
+  background: #ff8000;
+}
+.serviceCard:hover .serviceCardInfo h3{
+  color: #fff;
+}
+.serviceCard:hover .serviceCardInfo p{
+  color: #fff;
+}
+.serviceCard:hover button{
+  color: #fff;
+}
+.learnSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.learnSection h2 {
+  width: 40%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.learnSection img {
+  margin: 1.5rem 0;
+}
+
+.learnSection p {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #6f6262;
+  width: 32%;
+  text-align: center;
+}
+
+@media screen and (max-width: 940px) {
+  .findoutSection {
+    margin-top: 300px;
+  }
+
+  .findoutSection h2 {
+    width: 90%;
+  }
+
+  .findoutSection p {
+    width: 90%;
+  }
+
+  .learnSection h2 {
+    width: 90%;
+  }
+
+  .learnSection p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .findoutSection {
+    margin-top: 100px;
+
+  }
+
+  .findoutSection h2 {
+    font-size: 2rem;
+  }
+  .serviceSection{
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .findoutSection {
+    margin-top: 0;
+    padding: 100px 0 0;
+  }
+
+  .findoutSection h2 {
+    font-size: 1.5rem;
+  }
+}

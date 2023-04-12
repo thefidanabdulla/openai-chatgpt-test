@@ -5,11 +5,18 @@ import Link from 'next/link';
 import Logo from "../../../public/imgs/logo.svg";
 import { FaSignInAlt } from 'react-icons/fa';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import {GrClose} from "react-icons/gr";
+import { GrClose } from "react-icons/gr";
+import { toast } from "react-toastify";
+import { useRouter } from 'next/router';
 
 const Index = () => {
+
+  const router = useRouter();
   const [isNavbarOnTop, setisNavbarOnTop] = useState(true);
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false)
+
+  const [isLogin, setIsLogin] = useState();
+
   useEffect(() => {
     window.addEventListener('scroll', function () {
       if (window.scrollY > 50) {
@@ -18,7 +25,30 @@ const Index = () => {
         setisNavbarOnTop(true)
       }
     });
-  } )
+  })
+  useEffect(() => {
+    fetch('http://localhost:3001/auth')
+      .then(response => response.json())
+      .then(data => setIsLogin(data.isLogin))
+      .catch(error => console.log(error));
+  }, []);
+  console.log(isLogin)
+  const handleLogout = async (event) => {
+    event.preventDefault();
+    const response = await fetch('http://localhost:3001/auth', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        "id": "1",
+        "isLogin": "false"
+      })
+    });
+    router.reload();
+    toast.warning("You logged out");
+
+  }
   return (
     <nav className={`${styles.nav} ${!isNavbarOnTop && styles.whiteNavbar}`}>
       <div className={styles.logo}>
@@ -40,11 +70,26 @@ const Index = () => {
           <span>Newsletter</span>
         </Link>
         <div className={[styles.signinSignupBtnCon, styles.navMenuLink5].join(' ')}>
-          <button className={styles.signinSignupBtn}><FaSignInAlt /> <span>Sign in now</span></button>
+          {isLogin == "true" ? (
+            <div className={styles.signinProfile}>
+              <div></div>
+              <button
+                className={styles.signinSignupBtn}
+                onClick={() => handleLogout(event)}
+              >
+                <FaSignInAlt />
+                <span>Log out</span>
+              </button>
+            </div>
+          ) : (
+            <Link href={'/auth/signup'}>
+              <button className={styles.signinSignupBtn}><FaSignInAlt /> <span>Sign in now</span></button>
+            </Link>
+          )}
         </div>
       </div>
       <button className={styles.navHamburgerIcon} onClick={() => setIsMobileMenuOpened(!isMobileMenuOpened)}>
-        {!isMobileMenuOpened ? <RxHamburgerMenu /> : <GrClose /> }
+        {!isMobileMenuOpened ? <RxHamburgerMenu /> : <GrClose />}
       </button>
     </nav>
   )

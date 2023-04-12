@@ -2,12 +2,20 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import {AiOutlineSearch} from "react-icons/ai";
+import ProgressBar from "./../../components/Progressbar";
 
 export default function Home() {
   const [userInput, setUserInput] = useState("");
-  const [result, setResult] = useState();
-  const [splitedResults, setSplitedResults] = useState();
+  const [result, setResult] = useState([]);
+  const [pathwayData, setPathwayData] = useState();
 
+  useEffect(() => {
+      fetch('http://localhost:3001/pathwayMilestones')
+        .then(response => response.json())
+        .then(data => setPathwayData(data))
+        .catch(error => console.log(error));
+  }, [result]);
+  console.log(pathwayData)
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -35,7 +43,6 @@ export default function Home() {
 
 
 
-
   return (
     <div className={styles.pathwayContainer}>
       <Head>
@@ -57,22 +64,18 @@ export default function Home() {
 
         <div className={styles.resultContainer}> 
         {
-          result?.map((item, index) => (
+          pathwayData?.milestones?.map((item, index) => (
             <div key={index} className={styles.resultItem}>
               <label>
-                <input type="checkbox"/>
-                {item}
+                <input type="checkbox" checked={item?.completed}  onChange={(e) => console.log(e.target.checked)}/>
+                {item?.text}
               </label>
             </div>
           ) )
         }
         </div>
         {result?.length && (
-          <div className={styles.progressbarCon}>
-            <div className={styles.progressbar}>
-              <div className={styles.progressbarInner}></div>
-            </div>
-          </div>
+          <ProgressBar data={result} />
         )} 
       </main>
 

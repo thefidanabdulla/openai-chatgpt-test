@@ -1,3 +1,53 @@
 {
-    "users": []
+  "users": [
+    {
+      "id": "Cqnd4H68-Db1X5qIqywqM",
+      "email": "example@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "-DjQLmM_hANcR_OW9FRDy",
+      "email": "example11@gmail.com",
+      "password": "abc"
+    }
+  ],
+  "auth": {
+    "id": "1",
+    "isLogin": "false"
+  },
+  "pathwayMilestones": {
+    "id": 2,
+    "milestones": [
+      {
+        "id": "-0r7OVIxjIh-2wRVmknhf",
+        "text": "Start by reading up on the fundamentals: Make sure you understand the basics of Javascript by reading online tutorials or taking a JavaScript course.",
+        "completed": false
+      },
+      {
+        "id": "FL9IL_O0jALCW6rogJw-x",
+        "text": "Practice writing code: Arm yourself with a text editor and begin practicing your code writing. Try to write a few simple scripts and programs to get a feel for the language.",
+        "completed": false
+      },
+      {
+        "id": "pUDcKtiRVsqbHLFrCLAKv",
+        "text": "Use online playgrounds: There are many online playgrounds that can help you test and play with JavaScript code snippets. These can be a great way to get started.",
+        "completed": false
+      },
+      {
+        "id": "5bz_Pm3HOBy_YdWFNCfV5",
+        "text": "Learn the conventions: Understanding the conventions in JavaScript and how they should be used will help you write cleaner code and understand other people’s code more quickly.",
+        "completed": false
+      },
+      {
+        "id": "ViS_ePG3PKMT3z7SYSy55",
+        "text": "Learn the frameworks: Once you’re comfortable with the language, start learning advanced frameworks like jQuery and AngularJS.",
+        "completed": false
+      },
+      {
+        "id": "zBV1VdbK4dFd3smKHu97I",
+        "text": "Join the community: Find other JavaScript enthusiasts to chat with, take part in code challenges or ask questions on forums. This is a great way to stay up-to-date on the best practices and pick up new tips.",
+        "completed": false
+      }
+    ]
+  }
 }

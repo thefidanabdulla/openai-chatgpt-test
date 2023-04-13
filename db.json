@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": "Cqnd4H68-Db1X5qIqywqM",
+      "email": "example@gmail.com",
+      "password": "123123"
+    },
+    {
+      "id": "-DjQLmM_hANcR_OW9FRDy",
+      "email": "example11@gmail.com",
+      "password": "abc"
+    }
+  ],
+  "auth": {
+    "id": "1",
+    "isLogin": "false"
+  },
+  "pathwayMilestones": {
+    "id": 2,
+    "milestones": [
+      {
+        "id": "cF5zLB4GS8N29-6gn8xPC",
+        "text": "Start with a basic learning resource, like Codecademy's free tutorial. It will walk you through the basics, including writing simple loops and functions and how events work on a web page.",
+        "completed": true
+      },
+      {
+        "id": "kda55NIOjEmbje5sxpZ5u",
+        "text": "After that, read a few books on the language to get a better understanding. Don't worry if the concepts are difficult at first, as you will understand more as you read/learn more.",
+        "completed": true
+      },
+      {
+        "id": "p-6drAAtCBK02I2XONpoI",
+        "text": "Move onto a more comprehensive tutorial or course to get a better understanding of JavaScript. There are a number of free online courses available and Code School even offers free introductory courses.",
+        "completed": true
+      },
+      {
+        "id": "SIpH5cAsB8Hgz97URUtwB",
+        "text": "Practice coding by solving small problems online with online resources like Codecademy, Codewars and Code Eval. This will help you understand the language better and build your skills in a practical way.",
+        "completed": true
+      },
+      {
+        "id": "ldioNmIa46r3TbksyW4VX",
+        "text": "Continue to practice and fine-tune, learning more about the language. There are a number of great resources for that, including Mozilla Developer Network, books on JS, and blogs about JS.",
+        "completed": true
+      },
+      {
+        "id": "ZBT6C2D2epdtAMmcn1uJj",
+        "text": "Join a JavaScript community, such as Stack Overflow, to get advice and help from experienced JavaScript developers and connect with other developers.",
+        "completed": false
+      }
+    ]
+  }
+}

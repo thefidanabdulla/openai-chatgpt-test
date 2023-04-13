@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
-import {AiOutlineSearch} from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 import ProgressBar from "./../../components/Progressbar";
 
 export default function Home() {
@@ -12,10 +12,10 @@ export default function Home() {
 
 
   useEffect(() => {
-      fetch('http://localhost:3001/pathwayMilestones')
-        .then(response => response.json())
-        .then(data => setPathwayData(data))
-        .catch(error => console.log(error));
+    fetch('http://localhost:3001/pathwayMilestones')
+      .then(response => response.json())
+      .then(data => setPathwayData(data))
+      .catch(error => console.log(error));
   }, [result]);
 
   useEffect(() => {
@@ -24,14 +24,14 @@ export default function Home() {
   useEffect(() => {
     updateMilestonesDataByCheck();
   }, [checkedData])
-  
+
   const updateMilestonesDataByCheck = async () => {
     const response = await fetch('http://localhost:3001/pathwayMilestones', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({id: 2, milestones: checkedData})
+      body: JSON.stringify({ id: 2, milestones: checkedData })
     });
   }
 
@@ -62,10 +62,16 @@ export default function Home() {
   function handleCheckboxClick(id) {
     setCheckedData(prevTodos => prevTodos.map(todo => {
       if (todo.id === id) {
-        return {...todo, completed: !todo.completed};
+        return { ...todo, completed: !todo.completed };
       }
       return todo;
     }));
+  }
+
+  const calculatePercent = () => {
+    const completedTodos = checkedData.filter(todo => todo.completed);
+    const percentCompleted = (completedTodos.length / checkedData.length) * 100;
+    return percentCompleted;
   }
 
   return (
@@ -87,21 +93,26 @@ export default function Home() {
           <button type="submit"><AiOutlineSearch /></button>
         </form>
 
-        <div className={styles.resultContainer}> 
-        {
-          checkedData?.map((item, index) => (
-            <div key={index} className={styles.resultItem}>
-              <label>
-                <input type="checkbox" checked={item?.completed} onChange={() => handleCheckboxClick(item?.id)} />
-                {item?.text}
-              </label>
-            </div>
-          ) )
-        }
+        <div className={styles.resultContainer}>
+          {
+            checkedData?.map((item, index) => (
+              <div key={index} className={styles.resultItem}>
+                <label>
+                  <input type="checkbox" checked={item?.completed} onChange={() => handleCheckboxClick(item?.id)} />
+                  {item?.text}
+                </label>
+              </div>
+            ))
+          }
         </div>
-        {result?.length && (
+        {/* {result?.length && (
           <ProgressBar data={result} />
-        )} 
+        )}  */}
+        <div className={styles.progressbarCon}>
+          <div className={styles.progressbar}>
+            <div className={styles.progressbarInner} style={{width: `${calculatePercent()}%`}}></div>
+          </div>
+        </div>
       </main>
 
     </div>

@@ -31,17 +31,17 @@
       {
         "id": "p-6drAAtCBK02I2XONpoI",
         "text": "Move onto a more comprehensive tutorial or course to get a better understanding of JavaScript. There are a number of free online courses available and Code School even offers free introductory courses.",
-        "completed": false
+        "completed": true
       },
       {
         "id": "SIpH5cAsB8Hgz97URUtwB",
         "text": "Practice coding by solving small problems online with online resources like Codecademy, Codewars and Code Eval. This will help you understand the language better and build your skills in a practical way.",
-        "completed": false
+        "completed": true
       },
       {
         "id": "ldioNmIa46r3TbksyW4VX",
         "text": "Continue to practice and fine-tune, learning more about the language. There are a number of great resources for that, including Mozilla Developer Network, books on JS, and blogs about JS.",
-        "completed": false
+        "completed": true
       },
       {
         "id": "ZBT6C2D2epdtAMmcn1uJj",

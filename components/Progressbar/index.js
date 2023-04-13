@@ -17,6 +17,8 @@ const ProgressBar = ({data}) => {
     });
   }
 
+  console.log("data", data)
+
   return (
     <div className={styles.progressbarCon}>
       <div className={styles.progressbar}>

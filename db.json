@@ -19,33 +19,33 @@
     "id": 2,
     "milestones": [
       {
-        "id": "-0r7OVIxjIh-2wRVmknhf",
-        "text": "Start by reading up on the fundamentals: Make sure you understand the basics of Javascript by reading online tutorials or taking a JavaScript course.",
+        "id": "cF5zLB4GS8N29-6gn8xPC",
+        "text": "Start with a basic learning resource, like Codecademy's free tutorial. It will walk you through the basics, including writing simple loops and functions and how events work on a web page.",
+        "completed": true
+      },
+      {
+        "id": "kda55NIOjEmbje5sxpZ5u",
+        "text": "After that, read a few books on the language to get a better understanding. Don't worry if the concepts are difficult at first, as you will understand more as you read/learn more.",
+        "completed": true
+      },
+      {
+        "id": "p-6drAAtCBK02I2XONpoI",
+        "text": "Move onto a more comprehensive tutorial or course to get a better understanding of JavaScript. There are a number of free online courses available and Code School even offers free introductory courses.",
         "completed": false
       },
       {
-        "id": "FL9IL_O0jALCW6rogJw-x",
-        "text": "Practice writing code: Arm yourself with a text editor and begin practicing your code writing. Try to write a few simple scripts and programs to get a feel for the language.",
+        "id": "SIpH5cAsB8Hgz97URUtwB",
+        "text": "Practice coding by solving small problems online with online resources like Codecademy, Codewars and Code Eval. This will help you understand the language better and build your skills in a practical way.",
         "completed": false
       },
       {
-        "id": "pUDcKtiRVsqbHLFrCLAKv",
-        "text": "Use online playgrounds: There are many online playgrounds that can help you test and play with JavaScript code snippets. These can be a great way to get started.",
+        "id": "ldioNmIa46r3TbksyW4VX",
+        "text": "Continue to practice and fine-tune, learning more about the language. There are a number of great resources for that, including Mozilla Developer Network, books on JS, and blogs about JS.",
         "completed": false
       },
       {
-        "id": "5bz_Pm3HOBy_YdWFNCfV5",
-        "text": "Learn the conventions: Understanding the conventions in JavaScript and how they should be used will help you write cleaner code and understand other people’s code more quickly.",
-        "completed": false
-      },
-      {
-        "id": "ViS_ePG3PKMT3z7SYSy55",
-        "text": "Learn the frameworks: Once you’re comfortable with the language, start learning advanced frameworks like jQuery and AngularJS.",
-        "completed": false
-      },
-      {
-        "id": "zBV1VdbK4dFd3smKHu97I",
-        "text": "Join the community: Find other JavaScript enthusiasts to chat with, take part in code challenges or ask questions on forums. This is a great way to stay up-to-date on the best practices and pick up new tips.",
+        "id": "ZBT6C2D2epdtAMmcn1uJj",
+        "text": "Join a JavaScript community, such as Stack Overflow, to get advice and help from experienced JavaScript developers and connect with other developers.",
         "completed": false
       }
     ]

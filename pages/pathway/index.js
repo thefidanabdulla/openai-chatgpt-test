@@ -7,7 +7,9 @@ import ProgressBar from "./../../components/Progressbar";
 export default function Home() {
   const [userInput, setUserInput] = useState("");
   const [result, setResult] = useState([]);
-  const [pathwayData, setPathwayData] = useState();
+  const [pathwayData, setPathwayData] = useState(result);
+  const [checkedData, setCheckedData] = useState(pathwayData);
+
 
   useEffect(() => {
       fetch('http://localhost:3001/pathwayMilestones')
@@ -15,7 +17,23 @@ export default function Home() {
         .then(data => setPathwayData(data))
         .catch(error => console.log(error));
   }, [result]);
-  console.log(pathwayData)
+
+  useEffect(() => {
+    setCheckedData(pathwayData?.milestones);
+  }, [pathwayData])
+  useEffect(() => {
+    updateMilestonesDataByCheck();
+  }, [checkedData])
+  
+  const updateMilestonesDataByCheck = async () => {
+    const response = await fetch('http://localhost:3001/pathwayMilestones', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({id: 2, milestones: checkedData})
+    });
+  }
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -41,7 +59,14 @@ export default function Home() {
     }
   }
 
-
+  function handleCheckboxClick(id) {
+    setCheckedData(prevTodos => prevTodos.map(todo => {
+      if (todo.id === id) {
+        return {...todo, completed: !todo.completed};
+      }
+      return todo;
+    }));
+  }
 
   return (
     <div className={styles.pathwayContainer}>
@@ -64,10 +89,10 @@ export default function Home() {
 
         <div className={styles.resultContainer}> 
         {
-          pathwayData?.milestones?.map((item, index) => (
+          checkedData?.map((item, index) => (
             <div key={index} className={styles.resultItem}>
               <label>
-                <input type="checkbox" checked={item?.completed}  onChange={(e) => console.log(e.target.checked)}/>
+                <input type="checkbox" checked={item?.completed} onChange={() => handleCheckboxClick(item?.id)} />
                 {item?.text}
               </label>
             </div>

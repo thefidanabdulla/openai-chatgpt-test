@@ -19,33 +19,38 @@
     "id": 2,
     "milestones": [
       {
-        "id": "cF5zLB4GS8N29-6gn8xPC",
-        "text": "Start with a basic learning resource, like Codecademy's free tutorial. It will walk you through the basics, including writing simple loops and functions and how events work on a web page.",
+        "id": "DKVisTSFd6T1aGhvId9Ic",
+        "text": "Get familiar with Unity's user interface and workflow. Explore the menus, windows and panels that you’ll use every day when creating games in Unity.",
         "completed": true
       },
       {
-        "id": "kda55NIOjEmbje5sxpZ5u",
-        "text": "After that, read a few books on the language to get a better understanding. Don't worry if the concepts are difficult at first, as you will understand more as you read/learn more.",
+        "id": "doC1F46wlxcn5KAO3UgsS",
+        "text": "Start with the basics: work through the official tutorials. These tutorials will teach you the basics of the Unity engine and help you get comfortable with both the user interface and the underlying concepts.",
         "completed": true
       },
       {
-        "id": "p-6drAAtCBK02I2XONpoI",
-        "text": "Move onto a more comprehensive tutorial or course to get a better understanding of JavaScript. There are a number of free online courses available and Code School even offers free introductory courses.",
+        "id": "-tqSB3qTNYMrm5E94Cf8Q",
+        "text": "Move on to more intermediate tutorials, such as game development with physics, animation, scripting, graphics, AI and networking.",
         "completed": true
       },
       {
-        "id": "SIpH5cAsB8Hgz97URUtwB",
-        "text": "Practice coding by solving small problems online with online resources like Codecademy, Codewars and Code Eval. This will help you understand the language better and build your skills in a practical way.",
+        "id": "kTpkNXk8LBKtl6LRKbw9E",
+        "text": "Get creative by exploring different game genres, such as 3D platformers, strategy games, or other types of games.",
         "completed": true
       },
       {
-        "id": "ldioNmIa46r3TbksyW4VX",
-        "text": "Continue to practice and fine-tune, learning more about the language. There are a number of great resources for that, including Mozilla Developer Network, books on JS, and blogs about JS.",
-        "completed": true
+        "id": "xhiLAec-U_hwVwc0tUTIP",
+        "text": "Dig into the advanced topics of augmented reality and virtual reality with Unity.",
+        "completed": false
       },
       {
-        "id": "ZBT6C2D2epdtAMmcn1uJj",
-        "text": "Join a JavaScript community, such as Stack Overflow, to get advice and help from experienced JavaScript developers and connect with other developers.",
+        "id": "Gaa5TxK72-ePjgf4O9_jA",
+        "text": "Test and refine your skills with a project or two. Work on small prototypes or complete games and share them with your friends or the community.",
+        "completed": false
+      },
+      {
+        "id": "8d7oQZI_iZEtV9clm2utZ",
+        "text": "Follow Unity's blog, updates and tutorials to stay up to date with the latest features and get tips and tricks from the professionals.",
         "completed": false
       }
     ]

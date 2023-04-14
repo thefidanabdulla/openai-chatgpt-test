@@ -7,32 +7,31 @@ import ProgressBar from "./../../components/Progressbar";
 export default function Home() {
   const [userInput, setUserInput] = useState("");
   const [result, setResult] = useState([]);
-  const [pathwayData, setPathwayData] = useState(result);
-  const [checkedData, setCheckedData] = useState(pathwayData);
+  // const [pathwayData, setPathwayData] = useState(result);
+  const [checkedData, setCheckedData] = useState([]);
 
 
   useEffect(() => {
     fetch('http://localhost:3001/pathwayMilestones')
       .then(response => response.json())
-      .then(data => setPathwayData(data))
+      .then(data => setCheckedData(data?.milestones))
       .catch(error => console.log(error));
   }, [result]);
-
-  useEffect(() => {
-    setCheckedData(pathwayData?.milestones);
-  }, [pathwayData])
+  
   useEffect(() => {
     updateMilestonesDataByCheck();
   }, [checkedData])
 
   const updateMilestonesDataByCheck = async () => {
-    const response = await fetch('http://localhost:3001/pathwayMilestones', {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ id: 2, milestones: checkedData })
-    });
+    if(!result?.length){
+      const response = await fetch('http://localhost:3001/pathwayMilestones', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id: 2, milestones: checkedData })
+      });
+    }
   }
 
   async function onSubmit(event) {
@@ -55,7 +54,7 @@ export default function Home() {
       setUserInput("");
     } catch (error) {
       console.error(error);
-      alert(error.message);
+      console.log(error.message);
     }
   }
 
@@ -69,8 +68,8 @@ export default function Home() {
   }
 
   const calculatePercent = () => {
-    const completedTodos = checkedData.filter(todo => todo.completed);
-    const percentCompleted = (completedTodos.length / checkedData.length) * 100;
+    const completedTodos = checkedData?.filter(todo => todo.completed);
+    const percentCompleted = (completedTodos?.length / checkedData?.length) * 100;
     return percentCompleted;
   }
 
@@ -105,14 +104,16 @@ export default function Home() {
             ))
           }
         </div>
-        {/* {result?.length && (
-          <ProgressBar data={result} />
-        )}  */}
-        <div className={styles.progressbarCon}>
-          <div className={styles.progressbar}>
-            <div className={styles.progressbarInner} style={{width: `${calculatePercent()}%`}}></div>
+        {result?.length ? (
+          <ProgressBar calculatePercent={calculatePercent()} data={result} />
+        ) : (
+          <div className={styles.progressbarCon}>
+            <div className={styles.progressbar}>
+              <div className={styles.progressbarInner} style={{width: `${calculatePercent()}%`}}></div>
+            </div>
           </div>
-        </div>
+        )} 
+
       </main>
 
     </div>

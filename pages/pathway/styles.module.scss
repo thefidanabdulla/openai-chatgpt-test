@@ -1,31 +1,36 @@
-.pathwayContainer{
+.pathwayContainer {
     padding: 100px 0 0;
     min-height: 80vh;
 }
-.pathwatMain{
+
+.pathwatMain {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-.pathwayHeader{
+
+.pathwayHeader {
     font-size: 3rem;
     margin-bottom: 2rem;
     color: #e3760f;
 }
-.pathwayForm{
+
+.pathwayForm {
     display: flex;
     gap: 8px;
 }
-.pathwayForm input{
+
+.pathwayForm input {
     padding: 10px;
     width: 250px;
     border: 1px solid #e3760f50;
     outline: none;
     border-radius: 5px;
 }
-.pathwayForm button{
+
+.pathwayForm button {
     background: #e3760f;
     border: 1px solid #e3760f;
     color: #fff;
@@ -35,18 +40,21 @@
     font-size: 1.5rem;
     transition: all 300ms ease;
 }
-.pathwayForm button:hover{
+
+.pathwayForm button:hover {
     color: #e3760f;
     background: #fff;
     cursor: pointer;
 }
-.resultContainer{
+
+.resultContainer {
     padding: 50px 100px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-.resultItem label{
+
+.resultItem label {
     display: flex;
     gap: 8px;
     font-size: 15px;
@@ -54,9 +62,11 @@
     line-height: 30px;
     color: #6f6262;
 }
-.resultItem label input{
+
+.resultItem label input {
     margin-top: 9px;
 }
+
 .progressbarCon {
     width: 100%;
     height: 80px;
@@ -76,7 +86,68 @@
     background: #fefefe;
     border-radius: 8px;
 }
-.progressbarInner{
+
+.progressbarInner {
     height: 16px;
     background: red;
+}
+
+.winModal {
+    position: fixed;
+    background: #e3760f;
+    width: 700px;
+    height: 400px;
+    box-shadow: 5px 3px 8px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    .winModalCon {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 10px;
+        padding-right: 10px;
+
+        button {
+            color: #fff;
+            font-size: 2rem;
+            border: none;
+            outline: none;
+            background: transparent;
+
+            &:hover {
+                transition: all 300ms ease;
+                transform: scale(1.01);
+                cursor: pointer;
+            }
+        }
+    }
+    .winModalText{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        h1{
+            font-size: 3rem;
+            color: #fff;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .resultContainer{
+        padding: 48px!important;
+    }
+    .winModal{
+        width: 90%;
+        .winModalText{
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
 }

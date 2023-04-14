@@ -3,12 +3,16 @@ import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { AiOutlineSearch } from "react-icons/ai";
 import ProgressBar from "./../../components/Progressbar";
+import { AiOutlineClose } from 'react-icons/ai';
+
 
 export default function Home() {
   const [userInput, setUserInput] = useState("");
   const [result, setResult] = useState([]);
   // const [pathwayData, setPathwayData] = useState(result);
   const [checkedData, setCheckedData] = useState([]);
+  const [isWinModalOpened, setIsWinModalOpened] = useState(false)
+
 
 
   useEffect(() => {
@@ -17,13 +21,13 @@ export default function Home() {
       .then(data => setCheckedData(data?.milestones))
       .catch(error => console.log(error));
   }, [result]);
-  
+
   useEffect(() => {
     updateMilestonesDataByCheck();
   }, [checkedData])
 
   const updateMilestonesDataByCheck = async () => {
-    if(!result?.length){
+    if (!result?.length) {
       const response = await fetch('http://localhost:3001/pathwayMilestones', {
         method: 'PUT',
         headers: {
@@ -72,12 +76,30 @@ export default function Home() {
     const percentCompleted = (completedTodos?.length / checkedData?.length) * 100;
     return percentCompleted;
   }
+  useEffect(() => {
+    if (calculatePercent() == 100) {
+      setIsWinModalOpened(true)
+    }
 
+  }, [calculatePercent()])
   return (
     <div className={styles.pathwayContainer}>
       <Head>
         <title>Eddy Pathways</title>
       </Head>
+      {isWinModalOpened && (
+        <div className={styles.winModal}>
+          <div className={styles.winModalCon}>
+            <button onClick={() => setIsWinModalOpened(false)}>
+              <AiOutlineClose />
+
+            </button>
+          </div>
+          <div className={styles.winModalText}>
+            <h1>Congratulations🥳</h1>
+          </div>
+        </div>
+      )}
 
       <main className={styles.pathwatMain}>
         <h3 className={styles.pathwayHeader}>Search</h3>
@@ -109,10 +131,10 @@ export default function Home() {
         ) : (
           <div className={styles.progressbarCon}>
             <div className={styles.progressbar}>
-              <div className={styles.progressbarInner} style={{width: `${calculatePercent()}%`}}></div>
+              <div className={styles.progressbarInner} style={{ width: `${calculatePercent()}%` }}></div>
             </div>
           </div>
-        )} 
+        )}
 
       </main>
 

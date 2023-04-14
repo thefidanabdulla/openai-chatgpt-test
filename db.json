@@ -19,39 +19,44 @@
     "id": 2,
     "milestones": [
       {
-        "id": "DKVisTSFd6T1aGhvId9Ic",
-        "text": "Get familiar with Unity's user interface and workflow. Explore the menus, windows and panels that you’ll use every day when creating games in Unity.",
+        "id": "fa75ged3qbTEkrYrQ6Omq",
+        "text": "Start with the basics: Get to know Unity’s user interface by participating in tutorials from Unity’s official website.",
         "completed": true
       },
       {
-        "id": "doC1F46wlxcn5KAO3UgsS",
-        "text": "Start with the basics: work through the official tutorials. These tutorials will teach you the basics of the Unity engine and help you get comfortable with both the user interface and the underlying concepts.",
+        "id": "nlU04dip-mu8jrpPv0sAq",
+        "text": "Demo projects: Download some of the sample projects provided by Unity to get accustomed to the environment.",
         "completed": true
       },
       {
-        "id": "-tqSB3qTNYMrm5E94Cf8Q",
-        "text": "Move on to more intermediate tutorials, such as game development with physics, animation, scripting, graphics, AI and networking.",
+        "id": "Htcyz-wtkNO8UZUhwc1TG",
+        "text": "Learn about the tools: Investigate its integrated tools for animation, design and editing.",
         "completed": true
       },
       {
-        "id": "kTpkNXk8LBKtl6LRKbw9E",
-        "text": "Get creative by exploring different game genres, such as 3D platformers, strategy games, or other types of games.",
+        "id": "P1e7kKVpiTVRC4d6BqDfq",
+        "text": "3D fundamentals: Understand 3D graphics from the basics such as geometry, materials, lighting and textures.",
         "completed": true
       },
       {
-        "id": "xhiLAec-U_hwVwc0tUTIP",
-        "text": "Dig into the advanced topics of augmented reality and virtual reality with Unity.",
-        "completed": false
+        "id": "bxhuUx2XRQv02DE4j6GBr",
+        "text": "Move to scripting: Get a good understanding of C# in order to be able to code scripts within the engine.",
+        "completed": true
       },
       {
-        "id": "Gaa5TxK72-ePjgf4O9_jA",
-        "text": "Test and refine your skills with a project or two. Work on small prototypes or complete games and share them with your friends or the community.",
-        "completed": false
+        "id": "wKeExFvLA3av60Qc1bk8r",
+        "text": "Make a project: Pick a project or game template, then start experimenting and building.",
+        "completed": true
       },
       {
-        "id": "8d7oQZI_iZEtV9clm2utZ",
-        "text": "Follow Unity's blog, updates and tutorials to stay up to date with the latest features and get tips and tricks from the professionals.",
-        "completed": false
+        "id": "1n637ERlEGERZpJs7F4Ci",
+        "text": "Share your work: Upload the working project to platforms such as itch.io, then share it with the world.",
+        "completed": true
+      },
+      {
+        "id": "ase--8j7qUP9grTvbTo6Y",
+        "text": "Iterate and refine: Get feedback from users, then improve the project using the features in Unity.",
+        "completed": true
       }
     ]
   }

@@ -16,7 +16,7 @@ const Index = () => {
   const [password, setPassword] = useState("");
 
   useEffect(() => {
-    fetch('http://localhost:3001/users')
+    fetch('https://eddyy.vercel.app/users')
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.log(error));
@@ -30,7 +30,7 @@ const Index = () => {
 
     if (haveAnAccount.length) {
       toast.success("You login successfully");
-      const response = await fetch('http://localhost:3001/auth', {
+      const response = await fetch('https://eddyy.vercel.app/auth', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

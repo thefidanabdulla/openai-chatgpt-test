@@ -10,7 +10,7 @@ const ProgressBar = ({ data, calculatePercent }) => {
     updateMilestonesData()
   }, [data])
   const updateMilestonesData = async () => {
-    const response = await fetch('http://localhost:3001/pathwayMilestones', {
+    const response = await fetch('https://eddyy.vercel.app/pathwayMilestones', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

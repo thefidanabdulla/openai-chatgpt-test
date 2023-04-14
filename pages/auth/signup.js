@@ -31,7 +31,7 @@ const Index = () => {
       return;
     };
 
-    const response = await fetch('http://localhost:3001/users', {
+    const response = await fetch('https://eddyy.vercel.app/users', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

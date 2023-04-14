@@ -27,7 +27,7 @@ const Index = () => {
     });
   })
   useEffect(() => {
-    fetch('http://localhost:3001/auth')
+    fetch('https://eddyy.vercel.app/auth')
       .then(response => response.json())
       .then(data => setIsLogin(data.isLogin))
       .catch(error => console.log(error));
@@ -35,7 +35,7 @@ const Index = () => {
   console.log(isLogin)
   const handleLogout = async (event) => {
     event.preventDefault();
-    const response = await fetch('http://localhost:3001/auth', {
+    const response = await fetch('https://eddyy.vercel.app/auth', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

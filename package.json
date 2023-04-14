@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "json-server": "npx json-server --watch db.json -p 3001"
   },
   "dependencies": {
     "json-server": "^0.17.3",

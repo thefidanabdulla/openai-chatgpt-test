@@ -16,7 +16,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    fetch('http://localhost:3000/pathwayMilestones')
+    fetch('http://localhost:3001/pathwayMilestones')
       .then(response => response.json())
       .then(data => setCheckedData(data?.milestones))
       .catch(error => console.log(error));
@@ -28,7 +28,7 @@ export default function Home() {
 
   const updateMilestonesDataByCheck = async () => {
     if (!result?.length) {
-      const response = await fetch('http://localhost:3000/pathwayMilestones', {
+      const response = await fetch('http://localhost:3001/pathwayMilestones', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

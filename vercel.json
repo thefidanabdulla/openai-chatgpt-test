@@ -1,10 +1,10 @@
 {
-  "functions": {
-    "pages/blog/[hello].tsx": {
-      "memory": 1024
-    },
-    "src/pages/isr/**/*": {
-      "maxDuration": 10
-    }
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/.*",
+        "dest": "/api/index.js"
+      }
+    ]
   }
-}
+  
